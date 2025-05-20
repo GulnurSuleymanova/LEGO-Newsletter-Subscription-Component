@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link href="./output.css" rel="stylesheet">
+    <title>Lego</title>
+</head>
+
+<body class="min-h-screen flex items-center justify-center ">
+    <div class=" max-w-[800px] m-auto" id="onecard">
+        <div
+            class="relative flex flex-col md:flex-row  my-6 shadow-sm border border-slate-200 rounded-lg md:max-w-[800px]  ">
+            <div class="relative p-2.5 md:w-2/5 shrink-0 overflow-hidden ">
+                <img src="./img/legoimg.webp" alt="" class="border rounded-lg ">
+            </div>
+            <div class="p-6">
+                <div
+                    class="mb-4 rounded-full bg-red-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-xl font-semibold text-slate-800">For All LEGO Fans</h1>
+                    <p class="text-slate-600 mt-2">Be the first to know about new LEGO sets and exclusive updates.</p>
+                    <p class="text-slate-600 mt-2 text-sm">Just enter your email address and get:</p>
+                    <ul class="text-sm text-slate-600 mt-2">
+                        <li><i class="fa-solid fa-circle-check text-yellow-400 "></i> Instant alerts for newly released
+                            LEGO sets</li>
+                        <li><i class="fa-solid fa-circle-check text-yellow-400 "></i> Access to special discounts and
+                            offers</li>
+                    </ul>
+                </div>
+
+                <div id="lego-form" class="mt-4 flex flex-col gap-3">
+                    <input type="email" id="emailInput" placeholder="example@gmail.com" required
+                        class="border border-slate-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                    <button type="submit"
+                        class="bg-yellow-400 hover:bg-yellow-500 text-slate-800 font-semibold py-2 px-4 rounded transition"
+                        onclick="subscribe()">
+                        Subscribe Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="succes" id="submit" hidden>
+        <div class="container w-[800px] m-auto">
+            <div
+                class="relative flex flex-col md:flex-row w-full my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
+
+                <div class="p-6">
+                    <div
+                        class="mb-4 rounded-full bg-red-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-semibold text-slate-800 my-8">Thanks for subscribing!</h1>
+
+                        <ul class="text-sm text-slate-600 mt-2">
+                            <li><i class="fa-solid fa-circle-check text-yellow-400"></i> A confirmation email has been
+                                sent to <span id="userEmail"></span>. Please open it and click the button inside to
+                                confirm your subscription.</li>
+                        </ul>
+                    </div>
+
+                    <div id="lego-form" class="mt-4 flex flex-col ">
+
+                        <button type="submit"
+                            class="bg-red-400 hover:bg-red-200 text-black font-semibold py-2 px-4 my-8 rounded transition"
+                            onclick="dismissMessage()">
+                            Dismis Message
+                        </button>
+                    </div>
+
+                </div>
+                <div class="relative p-2.5 md:w-2/5 shrink-0 overflow-hidden">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnA0cmxzNDJ5amxqN3B6M3l5dzhhZXZvbTVtMW1kbWljemw0N25iNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/THC7QidxMSKklyUi5s/giphy.gif"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
